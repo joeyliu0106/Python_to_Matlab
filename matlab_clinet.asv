@@ -1,0 +1,15 @@
+clc
+clear
+
+data_all = [];
+
+client = tcplinet('192.168.6.3', 22, 'Timeout', 60, 'InputBufferSize', 8196);
+%t.BytesAvailableFcnMode = 'byte'
+%client.InputBuffersize = 800000;
+%client.OutputBuffersize = 800000;
+
+while(1)
+    fopen(client);
+    fwrite(client, 'get')
+end
+fopen(client);
